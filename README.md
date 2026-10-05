@@ -15,3 +15,5 @@ NumPy vectorization significantly speeds up radioactive decay simulation compare
 - **Data Observation**: The observed data shows an exponential decay pattern over time.
 - **Comparison**: The observed data points closely match the analytical decay law curve (N_0 * exp(-lambda * t)).
 - **Snakemake Pipeline**: The Snakemake pipeline automates running `plot.py` to recreate `figure.png` whenever the source data or script changes.
+pw 2 lab a
+Numerical differentiation magnifies noise because taking differences between nearby measurements and dividing by a small time step ($\Delta t$) amplifies high-frequency errors at each step."

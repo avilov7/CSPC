@@ -32,3 +32,20 @@ pw 2 lab a
 
 ## Visualization
 Generated motion curves saved in `motion.png`.
+## PW2 --- Lab B: Optimization in Chemistry
+
+### Part 2: Three Routes to a Minimum
+* **Part 2A (Convex):** On $f(x) = (x - 3)^2 + 1$, Gradient descent, Newton's method, and SLSQP all converged smoothly to the global minimum at $x = 3.0$.
+* **Part 2B (Harder Landscape):** On $g(x) = x^4 - 3x^2 + x + 5$:
+  * **Starting at $x_0 = 0$:**
+    * Gradient descent ($x \approx -1.301$) and SLSQP ($x \approx -1.301$) found the local minimum.
+    * Newton's method converged to $x \approx 0.170$. Evaluating $g''(0.170) \approx -5.65 < 0$ proves Newton landed on a **local maximum**, illustrating that $g'(x) = 0$ alone does not guarantee a minimum.
+  * **Starting at $x_0 = 2$:**
+    * Gradient descent and Newton's method settled into the local minimum at $x \approx 1.131$ ($g'' \approx 9.35 > 0$).
+    * SLSQP traversed the barrier to find the overall global minimum at $x \approx -1.301$.
+* **Key Takeaway:** Optimization trajectories and outcomes depend heavily on algorithm selection, step size, and initial conditions ($x_0$).
+### Part 3: Chemistry 1 — Reaction Rate Fitting
+* **Model:** First-order reaction decay $C(t) = C_0 e^{-kt}$.
+* **Method:** Minimised total squared error using SLSQP with $x_0 = 0.5$ and bounds $[0, 5]$.
+* **Fitted Rate Constant ($k$):** $\approx 0.25$
+* **Result:** The fitted exponential decay curve matches the experimental data points cleanly (saved as `kinetics.png`).

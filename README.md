@@ -1,5 +1,4 @@
 # CSPC PW1 Lab A
-# CSPC PW1 Lab A Report
 
 ## Results
 - **Unit Tests:** All 3 tests passed (`pytest -v`).
@@ -49,3 +48,31 @@ Generated motion curves saved in `motion.png`.
 * **Method:** Minimised total squared error using SLSQP with $x_0 = 0.5$ and bounds $[0, 5]$.
 * **Fitted Rate Constant ($k$):** $\approx 0.25$
 * **Result:** The fitted exponential decay curve matches the experimental data points cleanly (saved as `kinetics.png`).
+# PW3: Data, Distributions, Testing, and Causation
+
+## Session 1
+
+### Dataset
+Heart Disease (Cleveland), UCI Machine Learning Repository / Kaggle.
+303 patients. Columns used: age, chol, trestbps, thalach, target.
+(Add a note here if you rebuilt heart.csv from the raw UCI file.)
+
+### Distributions
+![Distributions](distributions.png)
+
+- **age:** (2-3 sentences in your own words)
+- **chol:** 
+- **trestbps:** 
+- **thalach:** 
+
+### Normality
+![Q-Q plots](qqplots.png)
+
+| Variable | Skew | Excess kurtosis | Shapiro p | Verdict |
+|---|---|---|---|---|
+| age | -0.21 | -0.53 | 0.006 | |
+| chol | 1.13 | 4.40 | <0.0001 | |
+| trestbps | 0.70 | 0.85 | <0.0001 | |
+| thalach | -0.53 | -0.07 | 0.0001 | |
+
+**Reasoning:** (for each variable, one or two sentences on which evidence you trusted and why)
